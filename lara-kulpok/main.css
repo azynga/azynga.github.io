@@ -1,0 +1,329 @@
+@font-face {
+    font-family: "juliette";
+    src: url(./fonts/juliette.otf);
+}
+
+@font-face {
+    font-family: "gabriele";
+    src: url(./fonts/gabriele-bad.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: hsl(40, 10%, 5%);
+    font-family: Raleway, sans-serif;
+    color: hsl(40, 20%, 15%);
+    margin: 0;
+}
+
+#main {
+    margin: 0;
+}
+
+#header {
+    display: flex;
+    justify-content: space-evenly;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: hsla(40, 20%, 95%, 0.85);
+    z-index: 1;
+    box-shadow: 0 5px 8px -4px hsl(40, 10%, 25%);
+    backdrop-filter: blur(5px);
+    position: sticky;
+    margin: calc(50vh - 40px) 0 0 0;
+}
+
+#title {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-family: juliette;
+    line-height: 0px;
+    font-size: 62px;
+    max-height: 90%;
+    position: relative;
+    top: 4px;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.7);
+}
+
+#nav-bar {
+    display: inline-flex;
+    align-items: center;
+    width: 35%;
+    min-width: 400px;
+    position: relative;
+    top: 4px;
+}
+
+#nav-bar ul {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+#nav-bar li {
+    text-align: center;
+}
+
+#nav-bar a {
+    text-decoration: none;
+    color: hsl(40, 20%, 15%);
+    box-sizing: border-box;
+    border-top: solid 7px hsl(40, 20%, 15%);
+    transition: all 0.5s;
+    letter-spacing: 2px;
+    font-family: gabriele;
+    text-align: center;
+}
+
+#nav-bar a:hover {
+    color: hsl(40, 20%, 95%);
+    background-color: hsl(40, 20%, 15%);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    transition: all 1.5s;
+    padding: 120px 20vw;
+}
+
+h2 {
+    /*border-top: solid 3px hsl(40, 20%, 55%);*/
+    z-index: 0;
+    transition: all 0.5s;
+    margin-bottom: 8vh;
+    letter-spacing: 15px;
+    text-align: center;
+    width: 20vw;
+    min-width: 300px;
+    align-self: center;
+    color: hsl(40, 20%, 15%);
+    padding-top: 20px;
+    background-color: hsl(40, 4%, 9%);
+    padding: 0;
+    font-family: 'gabriele';
+    transform: rotate(
+1deg
+);
+    text-shadow: 1px 1px 1px hsl(40deg 15% 60%);
+    box-shadow: 1px 0px 1px 0px hsl(40deg 15% 60%);
+}
+
+section:hover h2 {
+    color: hsl(40, 20%, 65%);
+    box-shadow: 1px 0px 10px 0px hsl(40deg 15% 60%);
+    text-shadow: none;
+    transform: scale(1.2);
+}
+
+#welcome {
+    height: 100vh;
+    background-color: hsl(40, 10%, 5%);
+    margin-bottom: 120px;
+    margin-top: calc(-1 * (80px + (50vh - 40px)));
+    padding: 0;
+    overflow: hidden;
+}
+
+#welcome img {
+    transform: translate3d(0, 0, 0);
+    object-fit: cover;
+    position: relative;
+    will-change: transform;
+    transition: transform 8.5s ease-in-out 1.5s;
+}
+
+#work {
+    box-sizing: border-box;
+    /*height: calc(100vh + 80px);*/
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background-color: hsl(40, 10%, 5%);
+}
+
+#carousel {
+    margin: 0;
+    height: 70vh;
+    width: 100%;
+    background-color: hsl(40, 4%, 10%);
+    /*padding: 20px 0;*/
+}
+
+.carousel-item {
+    height: 70vh;
+    width: fit-content;
+    display: flex;
+    margin: 0 5px;
+}
+
+.carousel-item img {
+    height: 70vh;
+    object-fit: contain;
+    justify-self: center;
+    transition: all 0.5s;
+    /*border: solid 2px hsl(40, 20%, 75%);*/
+    box-sizing: border-box;
+    box-shadow: 0 0 80px 60px hsl(40deg 20% 5%);
+}
+
+#slideshow {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.controls {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    align-self: center;
+}
+
+.glider-prev, .glider-next {
+    position: relative !important;
+    left: 0 !important;
+    padding: 30vh 15vw !important;
+    box-sizing: border-box !important;
+}
+
+.glider-prev {
+    padding-left: 5vw !important;
+    padding-right: 35vw !important;
+}
+
+.glider-next {
+    padding-left: 35vw !important;
+    padding-right: 5vw !important;
+}
+
+#process {
+    background-color: hsl(40, 20%, 75%);
+}
+
+#process-text {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 10vw;
+    line-height: 25px;
+    font-size: 0.9rem;
+    hyphens: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+#process-text div {
+    width: 70%;
+    margin: 4vh 2vw;
+    padding: 2vh 2vw;
+    text-align: justify;
+    background-color: white;
+    transition: all 0.5s;
+}
+
+#process-text div:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px -5px hsl(40, 20%, 67%);
+}
+
+@media (max-width: 1200px) {
+    #process-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #process-text div {
+        width: 100%;
+        margin: 4vh 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #process-text {
+        margin: 0;
+    }
+}
+
+#person-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#person-text {
+    max-width: 40%;
+    margin: 0 0 0 2vw;
+    padding: 2vh 2vw;
+    text-align: justify;
+    background-color: white;
+    transition: all 0.5s;
+    line-height: 25px;
+    font-size: 0.9rem;
+    hyphens: auto;
+}
+
+#person-text:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px -5px hsl(40, 20%, 67%);
+}
+
+#portrait {
+    box-sizing: border-box;
+    max-width: 40%;
+    margin: 0 2vw 0 0;
+    transition: all 0.5s;
+    object-fit: cover;
+}
+
+#portrait:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px -5px hsl(40, 20%, 67%);
+}
+
+#contact {
+    background-color: hsl(40, 20%, 75%);
+}
+
+#form {
+    align-self: center;
+    width: 30%;
+    line-height: 25px;
+    font-size: 0.9rem;
+}
+
+#form fieldset {
+    display: flex;
+    flex-direction: column;
+    border: solid 3px hsl(40, 20%, 75%);
+}
+
+.form-unit {
+    display: flex;
+    flex-direction: column;
+    margin: 3vh;
+}
+
+textarea,
+input {
+    font-family: Raleway, sans-serif;
+    border: solid 1px hsl(40, 20%, 45%);
+    resize: none;
+    outline: none;
+}
